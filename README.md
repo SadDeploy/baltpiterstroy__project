@@ -1,6 +1,6 @@
-# BaltPeterStroy
+# BaltPiterStroy
 
-> This is jade template for BaltPeterStroy based on Raptorius Web Kit
+> This is jade template for BaltPiterStroy based on Raptorius Web Kit
 
 ## Usage
 
