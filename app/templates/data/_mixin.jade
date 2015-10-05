@@ -1,0 +1,5 @@
+mixin list(classUl, ...items)
+    ul(class=classUl)
+        each item in items
+            li.nav__element
+                a(href="#", id="#{items}").nav__element-item= item

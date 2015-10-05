@@ -1,0 +1,113 @@
+// benefits start
+#benefits.benefits
+  .container
+    h2.text--center.padbot30 Преимущества
+    .row
+      .col-xs-6
+        img(src="images/icons/icons_01.png", alt="").pull-left.padright10
+        .pull-left
+          h4.padtop20 Кирпично-монолитный дом
+          p Дом высокой прочности сподземным
+            br
+            | паркингом
+      .col-xs-6
+        img(src="images/icons/icons_02.png", alt="").pull-left.padright10
+        .pull-left
+          h4.padtop20 Новая инфраструктура
+          p Школы, детские сады, поликлиники, ТРК
+      .col-xs-6
+        img(src="images/icons/icons_03.png", alt="").pull-left.padright10
+        .pull-left
+          h4.padtop20 Парковая зона
+          p Парк имени 40-летия ВЛКСМВ 10 минутах
+            br
+            | от вас
+      .col-xs-6
+        img(src="images/icons/icons_04.png", alt="").pull-left.padright10
+        .pull-left
+          h4.padtop20 Do@Home (Умный дом)
+          p Управляйте своим домомпрямо с
+            br
+            | мобильного устройства
+// benefits end
+// slider start
+#gallery.gallery
+  .container
+    #slider.flexslider
+      ul.slides
+        - for (var x = 1; x < 10; x++)
+          li
+            img(src="images/slider__main-1.jpg", alt="")
+    #carousel.flexslider
+      ul.slides
+        - for (var x = 1; x < 10; x++)
+          li
+            img(src="images/slider__mini-#{x}.jpg", alt="")
+// slider end
+// book start
+#book.book
+  .container
+    h2.text--center Забронируйте квартиру
+    .row.center-xs
+      .col-xs-4
+        .box-row
+          .book__element
+            img(src="images/book-01.jpg")
+            h4  Однокомнатная квартира
+            p.font--lg от 32 т.р. за 1 м2
+            a(href="#bookme").fancybox.btn.btn--danger Забронировать
+      .col-xs-4
+        .box-row
+          .book__element
+            img(src="images/book-02.jpg")
+            h4 Двухкомнатная квартира
+            p.font--lg от 31 т.р. за 1 м2
+            a(href="#bookme").fancybox.btn.btn--danger Забронировать
+      .col-xs-4
+        .box-row
+          .book__element
+            img(src="images/book-03.jpg")
+            h4 Треххкомнатная квартира
+            p.font--lg от 30 т.р. за 1 м2
+            a(href="#bookme").fancybox.btn.btn--danger Забронировать
+    .row.center-xs.middle-xs
+      .col-xs
+        .book-row
+          img(src="images/icons/icons-pdf.png").padright20
+      .col-xs
+        .book-row
+          a(href="#") Ознакомтесь с проектной деклорацией
+// book end
+// video start
+#video.video
+  .container
+    h2.text--center Видео - презентация
+    iframe(width="1280", height="720", src="https://www.youtube.com/embed/Chn_iBL4MdQ", frameborder="0", allowfullscreen)
+// video end
+// feedback start
+.feedback
+  .container
+    h2.text--center Задайте вопрос специалисту
+    form.form-inline(action="", method="post")
+      .row.center-xs.around-xs
+        .col-xs-3.text--left
+          .box-row
+            label Имя:
+            input.form-control(type="text")
+        .col-xs-3.text--left
+          .box-row
+            label Телефон:
+            input.form-control(type="text")
+        .col-xs-3.text--left
+          .box-row
+            label Email:
+            input.form-control(type="email")
+        .col-xs-8.text--left.padtop50
+          label Сообщение:
+          textarea.form-control(rows='9')
+        .col-xs-12.padtop40
+          a(href="#").btn.btn--danger Отправить
+// feedback end
+// map start
+.map
+  iframe(src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2325.4861967552906!2d48.59091300000001!3d54.348389000000026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x415d38b4ff888c51%3A0xbb7f8c9c5ab1b96a!2zOS3QuSDQmNC90LbQtdC90LXRgNC90YvQuSDQv9GALdC0LCAxOCwg0KPQu9GM0Y_QvdC-0LLRgdC6LCDQo9C70YzRj9C90L7QstGB0LrQsNGPINC-0LHQuy4sIDQzMjA3Mg!3m2!1d54.348389!2d48.590913!5e0!3m2!1sru!2sru!4v1441976958487", width="100%", height="788", frameborder="0", style="border:0", allowfullscreen>)

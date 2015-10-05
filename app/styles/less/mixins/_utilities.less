@@ -1,0 +1,44 @@
+//
+// Mixins -> Utilities
+// ------------------------------------
+
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-hide() {
+  font: ~"0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@iterations: 10;
+.padbot (@index) when (@index > 0) {
+  .padbot@{index}0 {
+    padding-bottom: (@index * 10px);
+  }
+  .padbot(@index - 1);
+}
+.padtop (@index) when (@index > 0) {
+  .padtop@{index}0 {
+    padding-top: (@index * 10px);
+  }
+  .padtop(@index - 1);
+}
+.padright (@index) when (@index > 0) {
+  .padright@{index}0 {
+    padding-right: (@index * 10px);
+  }
+  .padright(@index - 1);
+}
+
+.padbot (0) {}
+.padbot (@iterations);
+.padtop (0) {}
+.padtop (@iterations);
+.padright (0) {}
+.padright (@iterations);

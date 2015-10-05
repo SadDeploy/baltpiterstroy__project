@@ -1,0 +1,303 @@
+//
+// Core -> Variables
+// ------------------------------------
+
+// Brand
+@gray-base:              #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+@lighter:                #fff;
+
+@brand-primary:         #fff;
+@brand-success:         #5cb85c;
+@brand-info:            #0f8fc4;;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #e84f49;;
+
+@enable:               false;
+
+// Variables -> Core
+
+// Base
+@base-font-family:                     "Roboto", Arial, sans-serif;
+@base-font-family-mono:                Menlo, Monaco, Consolas, "Courier New", monospace;
+@base-font-size:                       16px;
+@base-font-weight:                     300;
+@base-line-height:                     1.428571429;
+@base-color:                           #333;
+@base-background:                      #fff;
+
+// Link
+@link-color:                           @brand-info;
+@link-hover-color:                     @brand-info;
+@link-decoration:                      none;
+
+
+
+// Variables -> Modules
+
+// Typography
+@font-size-base:                       @base-font-size;
+@font-size-small:                      floor((@base-font-size * 0.875)); // ~14px
+@font-size-medium:                     floor((@base-font-size * 1.125)); // ~18px
+@font-size-large:                      ceil((@base-font-size * 1.25)); // ~20px
+
+
+@font-size-h1:                         floor((@base-font-size * 3)); // ~48px
+@font-size-h2:                         floor((@base-font-size * 2.5)); // ~40px
+@font-size-h3:                         ceil((@base-font-size * 1.875)); // ~30px
+@font-size-h4:                         ceil((@base-font-size * 1.25)); // ~20px
+@font-size-h5:                         @base-font-size;
+@font-size-h6:                         ceil((@base-font-size * 0.85)); // ~12px
+
+@line-height-base:                     1.158571429;
+@line-height-computed:                 floor((@font-size-base * @line-height-base)); // ~20px
+
+@heading-font-family:                  @base-font-family;
+@heading-weight:                       500;
+@heading-line-height:                  1.25;
+
+
+// Grid
+//@grid-breakpoint-xsmall:               540px;
+//@grid-breakpoint-small:                768px;
+//@grid-breakpoint-medium:               992px;
+//@grid-breakpoint-large:                1200px;
+//
+//@grid-area-small:                      750px;
+//@grid-area-medium:                     970px;
+//@grid-area-large:                      1140px;
+
+
+@screen-sm:                   480px;
+@screen-sm-min:               @screen-sm;
+@screen-phone:                @screen-sm-min;
+
+@screen-md:                   768px;
+@screen-md-min:               @screen-md;
+@screen-tablet:               @screen-md-min;
+
+@screen-lg:                   992px;
+@screen-lg-min:               @screen-lg;
+@screen-desktop:              @screen-lg-min;
+
+@screen-xlg:                  1200px;
+@screen-xlg-min:              @screen-xlg;
+@screen-xlg-desktop:          @screen-xlg-min;
+
+
+// Number of columns in the grid system
+@grid-columns:                 12;
+// Padding, to be divided by two and applied to the left and right of all columns
+@grid-gutter-width:            30px;
+
+
+// Small screen / tablet
+@container-mobile:             (930px + @grid-gutter-width);
+//** For `@screen-sm-min` and up.
+@container-sm:                 @container-mobile;
+
+// Small screen / tablet
+@container-tablet:             (930px + @grid-gutter-width);
+//** For `@screen-sm-min` and up.
+@container-md:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            (930px + @grid-gutter-width);
+//** For `@screen-md-min` and up.
+@container-lg:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      (930px + @grid-gutter-width);
+//** For `@screen-lg-min` and up.
+@container-xlg:                 @container-large-desktop;
+
+// Btn
+@btn-font-weight:               500;
+
+@btn-default-color:              #424242;
+@btn-default-bg:                 #fff;
+@btn-default-border:             #fff;
+
+@btn-primary-color:              @brand-primary;
+@btn-primary-bg:                 transparent;
+@btn-primary-border:             @brand-primary;
+
+@btn-danger-color:              #fff;
+@btn-danger-bg:                 @brand-danger;
+@btn-danger-border:             @brand-danger;
+
+// Padding
+@padding-base-vertical:          6px;
+@padding-base-horizontal:        12px;
+
+@padding-large-vertical:         12px;
+@padding-large-horizontal:       37px;
+
+@padding-small-vertical:         5px;
+@padding-small-horizontal:       10px;
+
+@padding-xs-vertical:            1px;
+@padding-xs-horizontal:          5px;
+
+@line-height-large:              1.3333333; // extra decimals for Win 8.1 Chrome
+@line-height-small:              1.5;
+
+@border-radius-base:             35px;
+@border-radius-large:            6px;
+@border-radius-small:            3px;
+
+@btn-border-radius-base:         @border-radius-base;
+@btn-border-radius-large:        @border-radius-large;
+@btn-border-radius-small:        @border-radius-small;
+
+
+// Type
+@blockquote-small-color:         @gray-light;
+@blockquote-font-size:           (@font-size-base * 1.25);
+@blockquote-border-color:        @gray-lighter;
+
+
+// Breadcrumbs
+@breadcrumb-padding-vertical:   8px;
+@breadcrumb-padding-horizontal: 15px;
+@breadcrumb-bg:                 #f5f5f5;
+@breadcrumb-color:              #ccc;
+@breadcrumb-active-color:       @gray-light;
+@breadcrumb-separator:          "/";
+
+
+// Pagination
+@pagination-color:                     @link-color;
+@pagination-bg:                        #fff;
+@pagination-border:                    #ddd;
+
+@pagination-hover-color:               @link-hover-color;
+@pagination-hover-bg:                  @gray-lighter;
+@pagination-hover-border:              #ddd;
+
+@pagination-active-color:              #fff;
+@pagination-active-bg:                 @brand-primary;
+@pagination-active-border:             @brand-primary;
+
+@pagination-disabled-color:            @gray-light;
+@pagination-disabled-bg:               #fff;
+@pagination-disabled-border:           #ddd;
+
+
+// Pager
+@pager-bg:                             @pagination-bg;
+@pager-border:                         @pagination-border;
+@pager-border-radius:                  15px;
+@pager-hover-bg:                       @pagination-hover-bg;
+@pager-active-bg:                      @pagination-active-bg;
+@pager-active-color:                   @pagination-active-color;
+@pager-disabled-color:                 @pagination-disabled-color;
+
+
+// Tables
+@table-cell-padding:            8px;
+@table-condensed-cell-padding:  5px;
+
+@table-bg:                      transparent;
+@table-bg-accent:               #f9f9f9;
+
+@table-bg-hover:                #f5f5f5;
+@table-bg-active:               @table-bg-hover;
+
+@table-border-color:            #ddd;
+
+
+// Forms
+@input-bg:                       #fff;
+@input-bg-disabled:              @gray-lighter;
+@input-color:                    @gray;
+@input-border:                   rgba(13, 13, 14, 0.15);
+@input-border-radius:            @border-radius-base;
+@input-border-focus:             #66afe9;
+@input-color-placeholder:        #999;
+@input-height-base:              (@line-height-computed + (@padding-large-vertical * 2) + 12);
+//** `.form-group` margin
+@form-group-margin-bottom:       15px;
+
+
+//== Navbar
+@navbar-height:                    50px;
+@navbar-margin-bottom:             @line-height-computed;
+@navbar-border-radius:             @border-radius-base;
+@navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
+@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+@navbar-collapse-max-height:       340px;
+
+@navbar-default-color:             #777;
+@navbar-default-bg:                #f8f8f8;
+@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           #ddd;
+@navbar-default-toggle-icon-bar-bg:        #888;
+@navbar-default-toggle-border-color:       #ddd;
+
+// Navbar links
+@navbar-default-link-color:                #fff;
+@navbar-default-link-hover-color:          @brand-danger;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         #555;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
+
+
+// Navs
+@nav-link-padding:                          10px 15px;
+@nav-link-hover-bg:                         @gray-lighter;
+
+@nav-tabs-active-link-hover-bg:             @base-background;
+@nav-tabs-active-link-hover-color:          @gray;
+@nav-tabs-active-link-hover-border-color:   #ddd;
+
+@nav-tabs-justified-link-border-color:            #ddd;
+@nav-tabs-justified-active-link-border-color:     @base-background;
+
+
+// Form states and table
+@state-success-text:             @brand-success;
+@state-success-bg:               #dff0d8;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:                @brand-info;
+@state-info-bg:                  #d9edf7;
+@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+
+
+//** Disabled cursor for form controls and buttons.
+@cursor-disabled:                not-allowed;
+
+//-- Z-index master list
+@zindex-navbar:                  1000;
+@zindex-navbar-fixed:            1030;
+@zindex-modal-background:        1040;
+@zindex-modal:                   1050;
+
+
+// Variables -> Components
+
+// Navbar
+// ...
+
+
+
+// Variables -> Partials
+
+// Header
+// ...
+
+
+
+// Variables -> Pages
+
+// Home
+// ...

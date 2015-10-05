@@ -1,0 +1,126 @@
+//
+// Modules -> Typography
+// ------------------------------------
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: @heading-weight;
+  font-family: @heading-font-family;
+  line-height: @heading-line-height;
+}
+
+h1 { font-size: @font-size-h1; color: #fff;}
+h2 { font-size: @font-size-h2; color: @brand-danger; font-weight: @base-font-weight; }
+h3 { font-size: @font-size-h3; color: @brand-primary; font-weight: @base-font-weight; margin-bottom: 0;}
+h4 { font-size: @font-size-h4; }
+h5 { font-size: @font-size-h5; }
+h6 { font-size: @font-size-h6; }
+
+// Paragraphs
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+// Alignment
+.text--left           { text-align: left; }
+.text--right          { text-align: right; }
+.text--center         { text-align: center; }
+.text--justify        { text-align: justify; }
+.text--nowrap         { white-space: nowrap; }
+
+// Responsive alignment
+
+.text-xs-left   { text-align: left; }
+.text-xs-right  { text-align: right; }
+.text-xs-center { text-align: center; }
+
+@media (min-width: @screen-sm-min) {
+.text-sm-left   { text-align: left; }
+.text-sm-right  { text-align: right; }
+.text-sm-center { text-align: center; }
+}
+
+@media (min-width: @screen-md-min) {
+.text-md-left   { text-align: left; }
+.text-md-right  { text-align: right; }
+.text-md-center { text-align: center; }
+}
+
+@media (min-width: @screen-lg-min) {
+.text-lg-left   { text-align: left; }
+.text-lg-right  { text-align: right; }
+.text-lg-center { text-align: center; }
+}
+
+
+// Transformation
+.text--lowercase      { text-transform: lowercase; }
+.text--uppercase      { text-transform: uppercase; }
+.text--capitalize     { text-transform: capitalize; }
+
+.font--sm {
+  font-size: @font-size-small;
+}
+.font--md {
+  font-size: @font-size-medium;
+}
+.font--lg {
+  font-size: @font-size-large;
+}
+// Contextual colors
+.text--primary {
+  .text-emphasis-variant(@brand-primary);
+}
+.text--success {
+  .text-emphasis-variant(@brand-success);
+}
+.text--info {
+  .text-emphasis-variant(@brand-info);
+}
+.text--warning {
+  .text-emphasis-variant(@brand-warning);
+}
+.text--danger {
+  .text-emphasis-variant(@brand-danger);
+}
+
+
+// Blockquotes
+blockquote {
+  padding: (@line-height-computed / 2) @line-height-computed;
+  margin: 0 0 @line-height-computed;
+  font-size: @blockquote-font-size;
+  border-left: 5px solid @blockquote-border-color;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Note: Deprecated small and .small as of v3.1.0
+  // Context: https://github.com/twbs/bootstrap/issues/11660
+  footer,
+  small,
+  .small {
+    display: block;
+    font-size: 80%; // back to default font-size
+    line-height: @line-height-base;
+    color: @blockquote-small-color;
+
+    &:before {
+      content: '\2014 \00A0'; // em dash, nbsp
+    }
+  }
+}
+

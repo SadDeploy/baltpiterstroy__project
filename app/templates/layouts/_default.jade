@@ -1,0 +1,31 @@
+doctype html
+html(lang="ru")
+  include ../data/_mixin
+  head
+    include ../partials/_head
+
+  block pageName
+    -var pageName = 'home'
+
+  body(class="page-#{pageName}")
+    include ../partials/_popup
+    header.site-header(role="banner")
+      include ../partials/_header
+      block siteHeader
+
+    main.site-main(role="main")
+      block siteMain
+
+    footer.site-footer(role="contentinfo")
+      include ../partials/_footer
+      block siteFooter
+
+// build:js(./app/) scripts/vendor.js
+// bower:js
+// endbower
+// endbuild
+// build:js scripts/plugins.js
+script(src="fancybox/source/jquery.fancybox.js")
+script(src="scripts/vendor/backgroundVideo.js")
+// endbuild
+script(src="scripts/scripts.js")

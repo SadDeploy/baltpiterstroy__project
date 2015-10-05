@@ -1,0 +1,51 @@
+//
+// Modules -> Buttons
+// ------------------------------------
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: @btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 2px solid transparent;
+  white-space: nowrap;
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+}
+
+.btn--default {
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+  &:hover,&:focus {background-color: transparent}
+}
+.btn--primary {
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+  &:hover,&:focus {color: #000}
+}
+// Success appears as green
+.btn--danger {
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+.btn--huge {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-large);
+}
+.btn--large {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+}
+.btn-small {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+}
+
+.btn--full {
+  display: block;
+  width: 100%;
+}
+// Vertically space out multiple block buttons
+.btn--full + .btn--full {
+  margin-top: 5px;
+}

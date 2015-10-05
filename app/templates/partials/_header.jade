@@ -1,0 +1,12 @@
+.container
+  include ../components/_navbar
+
+  .padtop100.text--center
+    h1 Жилой комплекс «Триумф Парк»
+    p.font--md.text--primary.padbot30
+      b Квартиры от 30 тыс. рублей. за 1 кв.м.
+    a(href="#bookme").btn.btn--default.fancybox Забронировать
+#video-wrap.banner.video-wrap
+  video(preload="metadata",  id="my-video", loop, autoplay, width="1900", height="1200", poster="video/mult.jpg", style="top: -66px;")
+    source(width="1900", height="1200",  src="video/mult.mp4", type="video/mp4")
+  .statis-banner
